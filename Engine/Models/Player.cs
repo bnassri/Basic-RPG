@@ -9,6 +9,7 @@ namespace Engine.Models
 {
     public class Player : INotifyPropertyChanged
     {
+        //add backing variables for each property in the Player class so that the setter can store the new value
         private string _name;
         private string _characterClass;
         private int _hitPoints;
