@@ -8,11 +8,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Locations\farmField.png" />
+    <None Remove="Images\Locations\farmHouse.png" />
+    <None Remove="Images\Locations\healersHut.png" />
+    <None Remove="Images\Locations\herbalistGarden.png" />
+    <None Remove="Images\Locations\herbalistHut.png" />
     <None Remove="Images\Locations\playerHome.png" />
+    <None Remove="Images\Locations\spiderForest.png" />
+    <None Remove="Images\Locations\townGate.png" />
+    <None Remove="Images\Locations\townSquare.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Locations\farmField.png" />
+    <Resource Include="Images\Locations\farmHouse.png" />
+    <Resource Include="Images\Locations\healersHut.png" />
+    <Resource Include="Images\Locations\herbalistGarden.png" />
+    <Resource Include="Images\Locations\herbalistHut.png" />
     <Resource Include="Images\Locations\playerHome.png" />
+    <Resource Include="Images\Locations\spiderForest.png" />
+    <Resource Include="Images\Locations\townGate.png" />
+    <Resource Include="Images\Locations\townSquare.png" />
   </ItemGroup>
 
 </Project>
