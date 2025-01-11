@@ -1,10 +1,11 @@
-﻿using Engine.Models;
+﻿using Engine.Factory;
+using Engine.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Engine.Factories;
+
 
 namespace Engine.ViewModels
 {
@@ -30,7 +31,7 @@ namespace Engine.ViewModels
             //call createWorld function to create a new world object
             CurrentWorld = factory.CreateWorld();
 
-            CurrentLocation = CurrentWorld.LocationAt(0,0);
+            CurrentLocation = CurrentWorld.LocationAt(0, 0);
 
         }
     }
