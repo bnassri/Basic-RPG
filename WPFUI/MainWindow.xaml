@@ -98,6 +98,54 @@
             </Border>
         </Grid>
         <Label Grid.Row="2" Grid.Column="0" Content="Inventory/Quests" Background="BurlyWood"/>
-        <Label Grid.Row="2" Grid.Column="1" Content="Combat/Movement Controls" Background="Lavender"/>
+
+        <Grid Grid.Row="2" Grid.Column="1" Background="Lavender">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="255"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Row="0" Grid.Column="1">
+                <!--Providing 3 rows and 3 columns for the buttons-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--Add movement buttons and adjust size and margin, and click attribute-->
+                <Button Grid.Row="0" Grid.Column="1" 
+                        Height ="25" Width="65" Margin="10"
+                        Click="OnClick_MoveNorth"
+                        Content="North"/>
+                <Button Grid.Row="1" Grid.Column="0" 
+                        Height ="25" Width="65" Margin="10"
+                        Click="OnClick_MoveWest"
+                        Content="West"/>
+                <Button Grid.Row="1" Grid.Column="2" 
+                        Height ="25" Width="65" Margin="10"
+                        Click="OnClick_MoveEast"
+                        Content="East"/>
+                <Button Grid.Row="2" Grid.Column="1" 
+                        Height ="25" Width="65" Margin="10"
+                        Click="OnClick_MoveSouth"
+                        Content="South"/>
+
+
+            </Grid>
+            
+        </Grid>
+
     </Grid>
 </Window>

@@ -29,6 +29,26 @@ namespace WPFUI
             DataContext = _gameSession; // Set the DataContext of the MainWindow to the GameSession object
         }
 
+        //private becuase only visibl to the MainWindow class
+        private void OnClick_MoveNorth(object sender, RoutedEventArgs e)
+        {
+            
 
+        }
+        private void OnClick_MoveWest(object sender, RoutedEventArgs e)
+        {
+
+
+        }
+        private void OnClick_MoveEast(object sender, RoutedEventArgs e)
+        {
+
+
+        }
+        private void OnClick_MoveSouth(object sender, RoutedEventArgs e)
+        {
+
+
+        }
     }
 }
