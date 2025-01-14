@@ -29,9 +29,6 @@ namespace WPFUI
             DataContext = _gameSession; // Set the DataContext of the MainWindow to the GameSession object
         }
 
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-        {
-            _gameSession.CurrentPlayer.ExperiencePoints += 10;
-        }
+
     }
 }
