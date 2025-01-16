@@ -7,7 +7,12 @@
         mc:Ignorable="d"
         FontSize="11pt"
         Title="Basel's Awesome Game" Height="768" Width="1024">
-    
+
+    <!--convert from a boolean value to visible or hiddent value; so it will check the boolean and either hide or make visible the button-->
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/> 
@@ -125,21 +130,26 @@
                 </Grid.ColumnDefinitions>
 
                 <!--Add movement buttons and adjust size and margin, and click attribute-->
+                <!--Add visibility property to use Boolean to Visibility converter to hide button if move is not possible-->
                 <Button Grid.Row="0" Grid.Column="1" 
                         Height ="25" Width="65" Margin="10"
                         Click="OnClick_MoveNorth"
+                        Visibility="{Binding HasLocationToNorth, Converter={StaticResource BooleanToVisibility}}"
                         Content="North"/>
                 <Button Grid.Row="1" Grid.Column="0" 
                         Height ="25" Width="65" Margin="10"
                         Click="OnClick_MoveWest"
+                        Visibility="{Binding HasLocationToWest, Converter={StaticResource BooleanToVisibility}}"
                         Content="West"/>
                 <Button Grid.Row="1" Grid.Column="2" 
                         Height ="25" Width="65" Margin="10"
                         Click="OnClick_MoveEast"
+                        Visibility="{Binding HasLocationToEast, Converter={StaticResource BooleanToVisibility}}"
                         Content="East"/>
                 <Button Grid.Row="2" Grid.Column="1" 
                         Height ="25" Width="65" Margin="10"
                         Click="OnClick_MoveSouth"
+                        Visibility="{Binding HasLocationToSouth, Converter={StaticResource BooleanToVisibility}}"
                         Content="South"/>
 
 
