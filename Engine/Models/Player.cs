@@ -22,7 +22,7 @@ namespace Engine.Models
           set
             {
                 _name = value;
-                OnPropertyChanged("Name");
+                OnPropertyChanged(nameof(Name));
             } 
         }
 
@@ -31,7 +31,7 @@ namespace Engine.Models
           set
             {
                 _characterClass = value;
-                OnPropertyChanged("CharacterClass");
+                OnPropertyChanged(nameof(CharacterClass));
             } 
         }
 
@@ -39,7 +39,7 @@ namespace Engine.Models
         { get { return _hitPoints; }
             set {
                 _hitPoints = value;
-                OnPropertyChanged("HitPoints");
+                OnPropertyChanged(nameof(HitPoints));
             }
         }
 
@@ -47,7 +47,7 @@ namespace Engine.Models
         { get { return _experiencePoints; } //Get the current value of the experience points
           set { 
                 _experiencePoints = value;  //Set the new value of the experience points
-                OnPropertyChanged("ExperiencePoints"); // Raise the PropertyChanged event
+                OnPropertyChanged(nameof(ExperiencePoints)); // Raise the PropertyChanged event
              } 
         }
 
@@ -57,7 +57,7 @@ namespace Engine.Models
             set
             {
                 _level = value;
-                OnPropertyChanged("Level");
+                OnPropertyChanged(nameof(Level));
             }
         }
 
@@ -67,7 +67,7 @@ namespace Engine.Models
             set
             {
                 _gold = value;
-                OnPropertyChanged("Gold");
+                OnPropertyChanged(nameof(Gold));
             }
         }
 

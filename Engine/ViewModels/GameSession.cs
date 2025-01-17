@@ -20,12 +20,14 @@ namespace Engine.ViewModels
             set 
             {
                 _currentLocation = value;
-                OnPropertyChanged("CurrentLocation");
+                //use nameOf to ensure that the property name is correct
+                OnPropertyChanged(nameof(CurrentLocation));
+
                 //update the properties to determine if the player can move in a given direction
-                OnPropertyChanged("HasLocationToNorth");
-                OnPropertyChanged("HasLocationToSouth");
-                OnPropertyChanged("HasLocationToWest");
-                OnPropertyChanged("HasLocationToEast");
+                OnPropertyChanged(nameof(HasLocationToNorth));
+                OnPropertyChanged(nameof(HasLocationToSouth));
+                OnPropertyChanged(nameof(HasLocationToWest));
+                OnPropertyChanged(nameof(HasLocationToEast));
             }
         }
 
