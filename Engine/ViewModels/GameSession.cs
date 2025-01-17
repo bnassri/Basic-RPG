@@ -66,13 +66,15 @@ namespace Engine.ViewModels
 
         public GameSession()
         {
-            CurrentPlayer = new Player();
-            CurrentPlayer.Name = "Basel";
-            CurrentPlayer.Gold = 1000000;
-            CurrentPlayer.CharacterClass = "Fighter";
-            CurrentPlayer.HitPoints = 10;
-            CurrentPlayer.ExperiencePoints = 0;
-            CurrentPlayer.Level = 1;
+            CurrentPlayer = new Player 
+            {
+                Name="Basel", 
+                CharacterClass="Fighter",
+                Gold=100,
+                HitPoints=10,
+                ExperiencePoints=0,
+                Level=1
+            };
 
             //instantiate a new WorldFactory object
             WorldFactory factory = new WorldFactory();
