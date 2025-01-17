@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Engine.ViewModels
 {
-    public class GameSession : INotifyPropertyChanged
+    public class GameSession : BaseNotification
     {
         private Location _currentLocation;
         public World CurrentWorld { get; set; }
@@ -102,11 +102,7 @@ namespace Engine.ViewModels
             CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate + 1, CurrentLocation.YCoordinate);
         }
 
-        public event PropertyChangedEventHandler PropertyChanged; // Event that is raised when a property changes
-        protected virtual void OnPropertyChanged(string propertyName) // Method to raise the PropertyChanged event
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)); // If there are any subscribers to the PropertyChanged event, invoke the event
-        }
+
 
     }
 

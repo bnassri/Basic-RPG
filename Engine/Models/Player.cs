@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Models
 {
-    public class Player : INotifyPropertyChanged
+    public class Player : BaseNotification
     {
         //add backing variables for each property in the Player class so that the setter can store the new value
         private string _name;
@@ -69,12 +69,6 @@ namespace Engine.Models
                 _gold = value;
                 OnPropertyChanged(nameof(Gold));
             }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged; // Event that is raised when a property changes
-        protected virtual void OnPropertyChanged(string propertyName) // Method to raise the PropertyChanged event
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)); // If there are any subscribers to the PropertyChanged event, invoke the event
         }
 
 
