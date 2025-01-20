@@ -30,6 +30,8 @@ namespace Engine.Factory
 
             //if the item is not found, return a clone of the found game item object
             //this lets us create a new instance of the object without changing the original object
+            //This will let us have unique items in the game – with the ability to modify each item individually.
+            //This will allow for enchanting an item, or having some items wear out with use, and require repair
             if (standardItem != null)
             {
                 return standardItem.Clone();
