@@ -84,6 +84,12 @@ namespace Engine.ViewModels
 
             CurrentLocation = CurrentWorld.LocationAt(0, 0);
 
+            //Add some items to the player's inventory to test the inventory system
+            //CurrentPlayer.Inventory.Add(ItemFactory.createGameItem(1001));
+            //CurrentPlayer.Inventory.Add(ItemFactory.createGameItem(1002));
+            //CurrentPlayer.Inventory.Add(ItemFactory.createGameItem(1002));
+
+
         }
 
         public void MoveNorth()
