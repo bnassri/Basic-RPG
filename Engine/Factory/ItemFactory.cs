@@ -21,6 +21,8 @@ namespace Engine.Factory
             _standardGameItems.Add(new GameItem(9004, "Rat fur", "2"));
             _standardGameItems.Add(new GameItem(9005, "Spider fang", "1"));
             _standardGameItems.Add(new GameItem(9006, "Spider silk", "2"));
+            _standardGameItems.Add(new GameItem(9001, "Snake fang", "1"));
+            _standardGameItems.Add(new GameItem(9002, "Snakeskin", "2"));
         }
 
         public static GameItem createGameItem(int itemTypeID)
